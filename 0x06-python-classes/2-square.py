@@ -2,7 +2,7 @@
 """Defining a class named Square."""
 
 
-ilass Square:
+class Square:
     """This is a square."""
 
     def __init__(self, size):
