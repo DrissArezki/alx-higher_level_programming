@@ -10,7 +10,7 @@ class Square:
 
 
         Arguments are:
-        size (int): is the size of the new square.
+            size (int): is the size of the new square.
         """
         if not isinstance(size, int):
             raise TypeError("size must be an integer")
