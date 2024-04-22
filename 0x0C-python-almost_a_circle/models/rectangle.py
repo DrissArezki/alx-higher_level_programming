@@ -72,3 +72,29 @@ class Rectangle(Base):
         s = '\n' * self.y + \
             (' ' * self.x + '#' * self.width + '\n') * self.height
         print(s, end='')
+
+    def __str__(self):
+        '''Returns a string info about the rectangle drawn.'''
+        return '[{}] ({}) {}/{} - {}/{}'.\
+                format(type(self).__name__, self.id, self.x, self.y, self.width, self.height)
+
+    def __update(self, id=None, width=None, height=None, x=None, y=None):
+        '''updating the attributes into the args.'''
+        if id is not None:
+            self.id = id
+        if width is not None:
+            self.width = width
+        if height is not None:
+            self.height = height
+        if x is not None:
+            self.x = x
+        if y is not None:
+            self.y = y
+
+    def update(self, *args, **kwargs):
+        '''Update 0 of instances.'''
+        #print(args, kwargs)
+        if args:
+            self.__update(*args)
+        elif kwargs:
+            self.__update(**kwargs)
