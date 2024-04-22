@@ -75,7 +75,7 @@ class Rectangle(Base):
 
     def __str__(self):
         '''returns info of the rectangle.'''
-        return '[{}] ({}) {}/{} - {}/{}'\
+        return '[{}] ({}) {}/{} - {}/{}'.\
             format(type(self).__name__, self.id, self.x, self.y, self.width, self.height)
 
     def __update(self, id=None, width=None, height=None, x=None, y=None):
