@@ -52,3 +52,13 @@ class Base:
             neuf = None
         neuf.update(**dictionary)
         return neuf
+
+    @classmethod
+    def load_from_file(cls):
+        '''Loads string from file and unjson files.'''
+        from os import path
+        file = "{}.json".format(cls.__name__)
+        if not path.isfile(file):
+            return []
+        with open(file, "r", encoding="utf-8") as f:
+            return [cls.create(**d) for d in cls from_json_string(f.read)]
