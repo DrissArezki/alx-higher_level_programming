@@ -73,6 +73,11 @@ class Rectangle(Base):
             (' ' * self.x + '#' * self.width + '\n') * self.height
         print(s, end='')
 
+    def __str__(self):
+        '''returns info of the rectangle.'''
+        return '[{}] ({}) {}/{} - {}/{}'\
+            format(type(self).__name__, self.id, self.x, self.y, self.width, self.height)
+
     def __update(self, id=None, width=None, height=None, x=None, y=None):
         '''Updating the attributes into the args.'''
         if id is not None:
@@ -87,8 +92,8 @@ class Rectangle(Base):
             self.y = y
 
     def update(self, *args, **kwargs):
-        '''Update 0 of instances.'''
-        #print(args, kwargs)
+        '''Update of instances via no keword or keyword args.'''
+        # print(args, kwargs)
         if args:
             self.__update(*args)
         elif kwargs:
