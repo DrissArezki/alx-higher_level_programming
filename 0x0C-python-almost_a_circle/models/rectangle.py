@@ -74,9 +74,9 @@ class Rectangle(Base):
         print(s, end='')
 
     def __str__(self):
-        '''returns info of the rectangle.'''
+        '''Returns the info of the square.'''
         return '[{}] ({}) {}/{} - {}/{}'.\
-                format(type(self).__name__, self.id, self.x, self.y, self.width, self.height)
+            format(type(self).__name__, self.id, self.x, self.y, self.width, self.height)
 
     def __update(self, id=None, width=None, height=None, x=None, y=None):
         '''Updating the attributes into the args.'''
