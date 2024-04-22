@@ -70,14 +70,8 @@ class Rectangle(Base):
     def display(self):
         '''Displays a rectangle using the # sign.'''
         s = '\n' * self.y + \
-            (' ' * self.x + '#' * self.width + '\n') * self.height
+                (' ' * self.x + '#' * self.width + '\n') * self.height
         print(s, end='')
-
-
-    def __str__(self):
-        '''Returns a string info about the rectangle drawn.'''
-        return '[{}] ({}) {}/{} - {}/{}'.\
-        format(type(self).__name__, self.id, self.x, self.y, self.width, self.height)
 
     def __update(self, id=None, width=None, height=None, x=None, y=None):
         '''Updating the attributes into the args.'''
