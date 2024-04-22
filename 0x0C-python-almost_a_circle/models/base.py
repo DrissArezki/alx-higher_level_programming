@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 '''Module for the base class'''
 from json import dumps, loads
-
+import csv
 
 class Base:
     '''Representing the base of the hierarchy.'''
