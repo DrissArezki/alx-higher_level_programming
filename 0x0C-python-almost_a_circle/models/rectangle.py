@@ -68,7 +68,7 @@ class Rectangle(Base):
         return self.width * self.height
 
     def display(self):
-        '''Displays a rectangle using the # sign'''
+        '''Displays a rectangle using the # sign.'''
         s = '\n' * self.y + \
             (' ' * self.x + '#' * self.width + '\n') * self.height
         print(s, end='')
@@ -79,7 +79,7 @@ class Rectangle(Base):
                 format(type(self).__name__, self.id, self.x, self.y, self.width, self.height)
 
     def __update(self, id=None, width=None, height=None, x=None, y=None):
-        '''updating the attributes into the args.'''
+        '''Updating the attributes into the args.'''
         if id is not None:
             self.id = id
         if width is not None:
