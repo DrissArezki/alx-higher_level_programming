@@ -2,6 +2,7 @@
 '''Module for the base class'''
 from json import dumps, loads
 import csv
+import turtle
 
 
 class Base:
