@@ -1,0 +1,2 @@
+-- Script that lists a table from a database in SQL.
+SHOW TABLES;
